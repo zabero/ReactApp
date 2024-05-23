@@ -1,0 +1,18 @@
+.voucher-container {
+  margin: 0 auto;
+  padding: 60px;
+  max-width: 600px;
+}
+
+.voucher-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.voucher-container .form-group {
+  margin-bottom: 20px;
+}
+
+.voucher-container .card {
+  margin-bottom: 20px;
+}

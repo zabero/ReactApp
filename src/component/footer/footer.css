@@ -1,0 +1,51 @@
+.footer {
+  background-color: #edbf88; /* ciemnoszary kolor tła */
+  color: white;
+  padding: 20px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  bottom: 0;
+  position: fixed;
+  left: 20px; /* Dociąga footer do lewej krawędzi ekranu */
+  right: 20px; /* Dociąga footer do prawej krawędzi ekranu */
+  bottom: 0px; /* Pozycjonuje footer na dole ekranu */
+  /*width: 100%; /* Zapewnia, że footer będzie miał pełną szerokość */
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  color: #003366;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.footer-text {
+  color: black;
+}
+
+.footer-link {
+  color: black;
+  margin-bottom: 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  height: 120px; /* Zmniejsz wysokość mapy */
+  border: none;
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

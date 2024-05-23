@@ -1,0 +1,68 @@
+.navbar {
+  height: 50px;
+  background-color: #edbf88 !important;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0px 0;
+  position: fixed;
+  left: 20px; /* Dociąga footer do lewej krawędzi ekranu */
+  right: 20px; /* Dociąga footer do prawej krawędzi ekranu */
+  z-index: 100;
+  top: 0;
+  margin-bottom: 20px; /* Dodaj dolny margines */
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003366;
+}
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 5px;
+}
+body {
+  font-family: sans-serif;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.nav-dropdown-menu.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Custom CSS for active and hover states */
+.nav-link:hover,
+.nav-link.active {
+  color: #003366; /* Change to your preferred hover and active color */
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background-color: #ffe5e5; /* Light red background on hover for dropdown items */
+  color: #003366; /* Text color */
+}

@@ -1,0 +1,27 @@
+/* src/pages/galeria.css */
+.gallery-container {
+  margin-top: 00px; /* Adjust this value based on the height of your navbar */
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%; /* Ensures the image takes up the full width of the container */
+  transform: scale(0.7); /* Adjusted scale value */
+}
+
+.gallery-item img:hover {
+  transform: scale(0.9); /* Adjusted scale value */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
