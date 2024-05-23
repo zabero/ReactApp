@@ -15,6 +15,7 @@ import Cart from "./pages/cart.jsx";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Menu from "../src/component/menu/Menu";
+
 import { NotFound } from "./pages/404.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
