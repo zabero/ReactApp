@@ -107,7 +107,7 @@ export const Booking = () => {
   };
 
   return (
-    <div className="container-center">
+    <div className="container-center1">
       <Container>
         <Row className="justify-content-md-center">
           <Col md={12} className="form-wrapper">

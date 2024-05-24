@@ -9,8 +9,17 @@ import image3 from "../assets/galeria/image3.jpg";
 const massages = [
   {
     id: 1,
-    name: "Klasyczny",
+    name: "Masaż klasyczny Tajski",
     image: image1,
+    description:
+      "Relaksujący masaż klasyczny, który pomaga złagodzić napięcie mięśniowe i poprawić krążenie.",
+    benefits: [
+      "Redukcja stresu",
+      "Poprawa krążenia",
+      "Złagodzenie napięcia mięśniowego",
+      "Zwiększenie elastyczności",
+      "Wzmocnienie układu odpornościowego",
+    ],
     prices: {
       60: 130,
       90: 170,
@@ -19,8 +28,17 @@ const massages = [
   },
   {
     id: 2,
-    name: "Olejkowy",
+    name: "Masaż olejkami aromatycznymi",
     image: image2,
+    description:
+      "Masaż z użyciem olejków aromatycznych, który przynosi głęboki relaks i odnowę.",
+    benefits: [
+      "Głęboki relaks",
+      "Poprawa nastroju",
+      "Nawilżenie skóry",
+      "Łagodzenie bólu głowy",
+      "Detoksykacja organizmu",
+    ],
     prices: {
       60: 180,
       90: 230,
@@ -29,8 +47,17 @@ const massages = [
   },
   {
     id: 3,
-    name: "Stopy",
+    name: "Masaż stóp i nóg (refleksologia)",
     image: image3,
+    description:
+      "Refleksologia to masaż stóp, który stymuluje punkty refleksyjne i poprawia zdrowie całego ciała.",
+    benefits: [
+      "Złagodzenie bólu stóp",
+      "Redukcja napięcia",
+      "Poprawa krążenia",
+      "Stymulacja punktów refleksyjnych",
+      "Poprawa zdrowia całego ciała",
+    ],
     prices: {
       30: 70,
       60: 130,
@@ -55,56 +82,81 @@ function Voucher({ addToCart }) {
 
   return (
     <div className="voucher-container">
-      <Form>
-        <Form.Group controlId="massageSelect">
-          <Form.Label>Wybierz rodzaj masażu</Form.Label>
-          <Form.Control
-            as="select"
-            onChange={(e) =>
-              setSelectedMassage(
-                massages.find((m) => m.id === parseInt(e.target.value))
-              )
-            }
-          >
-            <option value="">Wybierz...</option>
-            {massages.map((massage) => (
-              <option key={massage.id} value={massage.id}>
-                {massage.name}
-              </option>
-            ))}
-          </Form.Control>
-        </Form.Group>
-        {selectedMassage && (
-          <Card>
-            <Card.Img variant="top" src={selectedMassage.image} />
-            <Card.Body>
-              <Card.Title>{selectedMassage.name}</Card.Title>
-              {duration && (
-                <Card.Text>
-                  Cena: {selectedMassage.prices[duration]} zł
-                </Card.Text>
-              )}
-            </Card.Body>
-          </Card>
-        )}
-        <Form.Group controlId="durationSelect">
-          <Form.Label>Wybierz długość masażu</Form.Label>
-          <Form.Control
-            as="select"
-            onChange={(e) => setDuration(e.target.value)}
-          >
-            <option value="">Wybierz...</option>
-            {selectedMassage &&
-              Object.keys(selectedMassage.prices).map((key) => (
-                <option key={key} value={key}>
-                  {key} minut
-                </option>
-              ))}
-          </Form.Control>
-        </Form.Group>
-        <Button variant="primary" onClick={handleAddToCart}>
-          Dodaj do koszyka
-        </Button>
+      <div className="header">
+        <h2>
+          Czy szukasz idealnego prezentu dla bliskiej osoby lub po prostu chcesz
+          podarować sobie chwile relaksu? Nasz voucher na masaż to doskonały
+          wybór!
+        </h2>
+      </div>
+      <Form className="content">
+        <div className="description">
+          {selectedMassage && (
+            <>
+              <img
+                className="image"
+                src={selectedMassage.image}
+                alt={selectedMassage.name}
+              />
+              <h3>{selectedMassage.name}</h3>
+              <p>{selectedMassage.description}</p>
+            </>
+          )}
+        </div>
+        <div className="benefits">
+          {selectedMassage && (
+            <div className="benefits-section">
+              <h4>Zalety masażu:</h4>
+              <ul>
+                {selectedMassage.benefits.map((benefit, index) => (
+                  <li key={index}>{benefit}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div className="selection">
+            <Form.Group controlId="massageSelect">
+              <Form.Label>Wybierz masaż</Form.Label>
+              <Form.Control
+                as="select"
+                onChange={(e) =>
+                  setSelectedMassage(
+                    massages.find((m) => m.id === parseInt(e.target.value))
+                  )
+                }
+              >
+                <option value="">Wybierz...</option>
+                {massages.map((massage) => (
+                  <option key={massage.id} value={massage.id}>
+                    {massage.name}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+          </div>
+          <div className="duration">
+            <Form.Group controlId="durationSelect">
+              <Form.Label>Wybierz długość masażu</Form.Label>
+              <Form.Control
+                as="select"
+                onChange={(e) => setDuration(e.target.value)}
+              >
+                <option value="">Wybierz...</option>
+                {selectedMassage &&
+                  Object.keys(selectedMassage.prices).map((key) => (
+                    <option key={key} value={key}>
+                      {key} minut
+                    </option>
+                  ))}
+              </Form.Control>
+            </Form.Group>
+          </div>
+          <div className="add-to-cart">
+            <Button variant="primary" onClick={handleAddToCart}>
+              Dodaj do koszyka
+            </Button>
+          </div>
+        </div>
       </Form>
     </div>
   );

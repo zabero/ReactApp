@@ -1,18 +1,59 @@
+/* voucher.css */
 .voucher-container {
-  margin: 0 auto;
-  padding: 60px;
-  max-width: 600px;
-}
-
-.voucher-container form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid red;
+  margin-top: 60;
 }
 
-.voucher-container .form-group {
+.header {
+  width: 100%;
+  border: 2px solid blue;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.voucher-container .card {
-  margin-bottom: 20px;
+.content {
+  display: flex;
+  border: 2px solid orange;
+  width: 100%;
+}
+
+.description {
+  flex: 1;
+  padding: 10px;
+}
+
+.description .image {
+  max-width: 100%;
+  height: auto;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.benefits-section {
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.selection {
+  border: 2px solid yellow;
+  padding: 10px;
+}
+
+.duration {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.add-to-cart {
+  border: 2px solid purple;
+  padding: 10px;
+  text-align: center;
 }
