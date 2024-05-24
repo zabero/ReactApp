@@ -1,3 +1,7 @@
 .custom-margin-top {
-  margin-top: 150px; /* Możesz dostosować tę wartość do potrzeb */
+  /* margin-top: 150px; Możesz dostosować tę wartość do potrzeb */
+}
+
+.routing-container {
+  min-height: calc(100vh - 50px - 179px);
 }

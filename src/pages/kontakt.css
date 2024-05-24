@@ -10,6 +10,7 @@ html {
   justify-content: center;
   min-height: 84vh;
   background-color: #242424;
+  min-width: 35%;
 }
 
 .form-wrapper {

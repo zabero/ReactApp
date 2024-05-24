@@ -5,7 +5,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   bottom: 0;
-  position: fixed;
+  /* position: fixed; */
   left: 20px; /* Dociąga footer do lewej krawędzi ekranu */
   right: 20px; /* Dociąga footer do prawej krawędzi ekranu */
   bottom: 0px; /* Pozycjonuje footer na dole ekranu */

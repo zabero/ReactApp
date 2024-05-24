@@ -37,6 +37,8 @@ body {
   max-height: 550px; /* Ensures the image does not exceed 400px in height */
   object-fit: cover; /* Ensures the image covers the container */
   transform: scale(0.9); /* Adjusted scale value */
+  max-width: 1080px;
+  max-height: 480px;
 }
 
 .gallery-item img:hover {

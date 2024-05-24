@@ -8,8 +8,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 94vh;
+  /* min-height: 94vh; */
   background-color: #242424;
+  min-width: 35%;
 }
 
 .form-wrapper {
