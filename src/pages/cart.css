@@ -1,0 +1,29 @@
+/* cart.css */
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.cart-items {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item button {
+  margin-left: 10px;
+}
+
+.d-grid {
+  width: 100%;
+  max-width: 600px;
+}

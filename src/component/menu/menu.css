@@ -66,3 +66,17 @@ body {
   background-color: #ffe5e5; /* Light red background on hover for dropdown items */
   color: #003366; /* Text color */
 }
+
+.fa-shopping-cart {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0 7px;
+  font-size: 12px;
+  margin-left: 2px;
+}

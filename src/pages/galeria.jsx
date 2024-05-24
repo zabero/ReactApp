@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./galeria.css";
 
 // Import images
@@ -10,21 +10,35 @@ import img4 from "../assets/galeria/image4.jpg";
 const images = [img1, img2, img3, img4]; // Array of imported images
 
 export const Galeria = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
   return (
     <div className="gallery-container">
       <div className="gallery">
-        {images.map((img, index) => (
-          <div key={index} className="gallery-item">
-            <img
-              src={img}
-              alt={`Gallery item ${index + 1}`}
-              onError={(e) => {
-                e.target.onerror = null; // Prevent looping
-                e.target.src = "path/to/placeholder/image.jpg"; // Placeholder image
-              }}
-            />
-          </div>
-        ))}
+        <div className="gallery-item">
+          <img
+            src={images[currentIndex]}
+            alt={`Gallery item ${currentIndex + 1}`}
+            onError={(e) => {
+              e.target.onerror = null; // Prevent looping
+              e.target.src = "path/to/placeholder/image.jpg"; // Placeholder image
+            }}
+          />
+        </div>
+        <div className="gallery-controls">
+          <button onClick={goToPrevious}>Previous</button>
+          <button onClick={goToNext}>Next</button>
+        </div>
       </div>
     </div>
   );

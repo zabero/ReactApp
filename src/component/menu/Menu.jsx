@@ -1,22 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, Route, Routes } from "react-router-dom";
-import Cart from "../../pages/cart";
-import Vouchers from "../../pages/voucher";
+import { Link } from "react-router-dom";
 import "./menu.css";
 import { Translations } from "../../const/menuconst";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-function Menu() {
-  const [cartItems, setCartItems] = useState([]);
-
-  const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
-  };
-
-  const removeFromCart = (index) => {
-    setCartItems(cartItems.filter((_, i) => i !== index));
-  };
-
+function Menu({ cartItems }) {
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary navbar-fixed-top">
@@ -61,12 +50,18 @@ function Menu() {
                 Galeria
               </Nav.Link>
               <Nav.Link as={Link} to={"/vouchery"}>
-                Vouchery
+                Sklep
+              </Nav.Link>
+              <Nav.Link as={Link} to={"/booking"}>
+                Umów wizytę
               </Nav.Link>
               <Nav.Link as={Link} to={"/kontakt"}>
                 Kontakt
               </Nav.Link>
-              <Cart items={cartItems} removeFromCart={removeFromCart} />
+              <Nav.Link as={Link} to={"/koszyk"}>
+                <i className="fas fa-shopping-cart"></i>
+                <span className="cart-count">{cartItems.length}</span>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -74,4 +69,5 @@ function Menu() {
     </>
   );
 }
+
 export default Menu;

@@ -1,16 +1,32 @@
 /* src/pages/galeria.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .gallery-container {
-  margin-top: 00px; /* Adjust this value based on the height of your navbar */
+  margin-top: 60px; /* Adjust this value based on the height of your navbar */
+  text-align: center;
+  padding-bottom: 60px; /* Space below the gallery for the buttons */
+  position: relative;
+  width: 100%;
 }
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column; /* Stack items vertically */
+  width: 100%;
 }
 
 .gallery-item {
   margin: 10px;
+  width: 100%;
+  max-width: 1200px; /* Maximum width for larger screens */
 }
 
 .gallery-item img {
@@ -18,10 +34,59 @@
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   width: 100%; /* Ensures the image takes up the full width of the container */
-  transform: scale(0.7); /* Adjusted scale value */
+  max-height: 550px; /* Ensures the image does not exceed 400px in height */
+  object-fit: cover; /* Ensures the image covers the container */
+  transform: scale(0.9); /* Adjusted scale value */
 }
 
 .gallery-item img:hover {
-  transform: scale(0.9); /* Adjusted scale value */
+  transform: scale(1); /* Adjusted scale value */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.gallery-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2; /* Ensure the buttons are on a higher layer */
+}
+
+.gallery-controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border-radius: 5px; /* Button rounded corners */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.gallery-controls button:hover {
+  background-color: #0056b3; /* Darker button background on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .gallery-container {
+    margin-top: 40px; /* Adjust this value based on the height of your navbar */
+  }
+
+  .gallery-controls button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    margin-top: 20px; /* Adjust this value based on the height of your navbar */
+  }
+
+  .gallery-controls button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
