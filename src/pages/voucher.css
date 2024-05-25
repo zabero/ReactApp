@@ -5,6 +5,7 @@
   align-items: center;
   padding: 20px;
   margin-top: 60;
+  font-family: "Open Sans", sans-serif;
 }
 
 .header {
@@ -55,11 +56,26 @@
 .benefits-section,
 .selection,
 .duration {
-  background-color: #6d5252;
+  background-color: #edbf88;
   border-radius: 8px;
+  color: #003366;
 }
 
 .selection,
 .duration {
   padding-bottom: 20px;
+}
+.text-shawow2 {
+  color: #003366;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rounded-bacground {
+  background-color: #edbf88;
+  border-radius: 8px;
+  color: #003366;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin-right: 10px;
+  box-shadow: 7px 6px 4px -1px rgba(66, 68, 90, 1);
 }

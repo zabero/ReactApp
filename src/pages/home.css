@@ -1,7 +1,15 @@
-.custom-margin-top {
-  /* margin-top: 150px; Możesz dostosować tę wartość do potrzeb */
-}
-
 .routing-container {
   min-height: calc(100vh - 50px - 179px);
+}
+
+.home-row {
+  background-color: #edbf88;
+  border-radius: 20px;
+  color: #003366;
+  box-shadow: 7px 6px 4px -1px rgba(66, 68, 90, 1);
+  font-family: "Open Sans", sans-serif;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

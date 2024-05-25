@@ -1,0 +1,44 @@
+.content-container2 {
+  min-height: calc(100vh - 50px - 179px);
+  font-family: "Open Sans", sans-serif;
+  /* margin-bottom: 15px; */
+  /* box-shadow: 7px 6px 4px -1px rgba(66, 68, 90, 1); */
+}
+
+.home-row {
+  background-color: #edbf88;
+  border-radius: 20px;
+  color: #003366;
+  box-shadow: 7px 6px 4px -1px rgba(66, 68, 90, 1);
+  font-family: "Open Sans", sans-serif;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.box-shadow {
+  box-shadow: 7px 6px 4px -1px rgba(66, 68, 90, 1);
+}
+
+.masaze-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.card-body {
+  background-color: #edbf88;
+  color: #003366;
+}
+.text-left {
+  text-align: left;
+  list-style-position: inside;
+}
+.text-center ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
