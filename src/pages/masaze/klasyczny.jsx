@@ -21,7 +21,7 @@ export const Masaze_klasyczny = () => {
                 akupresury i jogi, co sprawia, że jest to unikalne doświadczenie
                 relaksacyjne.
               </Card.Text>
-              <Card.Text className="text-masaze text-shadow">
+              <div className="text-masaze text-shadow">
                 <strong>Zalety masażu tajskiego klasycznego:</strong>
                 <ul>
                   <li>Redukcja stresu i napięcia</li>
@@ -30,8 +30,8 @@ export const Masaze_klasyczny = () => {
                   <li>Łagodzenie bólu i napięcia mięśniowego</li>
                   <li>Wzmacnianie systemu odpornościowego</li>
                 </ul>
-              </Card.Text>
-              <Card.Text className="text-masaze text-shadow">
+              </div>
+              <div className="text-masaze text-shadow">
                 <strong>Przeciwwskazania:</strong>
                 <ul>
                   <li>Ostre stany zapalne</li>
@@ -40,7 +40,7 @@ export const Masaze_klasyczny = () => {
                   <li>Problemy z sercem</li>
                   <li>Zaawansowana ciąża</li>
                 </ul>
-              </Card.Text>
+              </div>
             </Card.Body>
           </Card>
         </Col>
