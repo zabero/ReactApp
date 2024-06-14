@@ -158,6 +158,11 @@ function Voucher({ addToCart }) {
               </Form.Control>
             </Form.Group>
           </div>
+          {selectedMassage && duration && (
+            <div className="price-section text-shawow2 rounded-bacground mt-3">
+              <h4>Cena: {selectedMassage.prices[duration]} zł</h4>
+            </div>
+          )}
           <div className="add-to-cart">
             <Button
               className="mb-4"

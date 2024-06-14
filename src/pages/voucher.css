@@ -1,11 +1,12 @@
 /* voucher.css */
 .voucher-container {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   padding: 20px;
   margin-top: 60;
   font-family: "Open Sans", sans-serif;
+  min-height: 74vh;
 }
 
 .header {

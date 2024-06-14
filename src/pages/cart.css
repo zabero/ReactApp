@@ -1,15 +1,15 @@
-/* cart.css */
-
 .cart-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
+  background-color: #edbf88;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto; /* Wycentruj kontener */
+  color: #003366;
 }
 
 .cart-items {
-  width: 100%;
-  max-width: 600px;
   margin-bottom: 20px;
 }
 
@@ -23,7 +23,15 @@
   margin-left: 10px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .d-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.d-grid button {
   width: 100%;
-  max-width: 600px;
 }

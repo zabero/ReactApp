@@ -10,7 +10,7 @@ body {
   margin-top: 60px; /* Adjust this value based on the height of your navbar */
   text-align: center;
   padding-bottom: 60px; /* Space below the gallery for the buttons */
-  position: relative;
+  /* position: relative; */
   width: 100%;
 }
 
@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   flex-direction: column; /* Stack items vertically */
   width: 100%;
 }

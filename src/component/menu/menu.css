@@ -1,20 +1,16 @@
+/* Upewnij się, że cała nawigacja jest wyśrodkowana i nie przesuwa się na boki */
 .navbar {
   height: 50px;
   background-color: #edbf88 !important;
-  justify-content: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding: 0px 0;
-  /* position: fixed; */
-  left: 20px; /* Dociąga footer do lewej krawędzi ekranu */
-  right: 20px; /* Dociąga footer do prawej krawędzi ekranu */
+  border-radius: 20px;
+  padding: 0 20px;
   z-index: 100;
   top: 0;
-  margin-bottom: 20px; /* Dodaj dolny margines */
+  margin: 20px auto; /* Wycentrowanie nawigacji */
+  max-width: Auto; /* Maksymalna szerokość nawigacji */
 }
 
+/* Kontener nawigacji */
 .navContainer {
   width: 100%;
   max-width: 1024px;
@@ -24,10 +20,15 @@
   justify-content: space-between;
 }
 
+/* Styl logo */
 .logo {
   font-weight: 500;
+  height: 180px; /* Ustaw odpowiednią wysokość logo */
+  filter: drop-shadow(0 0 5px black) drop-shadow(0 0 5px black)
+    drop-shadow(0 0 5px black); /* Dodaj mocniejszy czarny cień */
 }
 
+/* Przyciski nawigacji */
 .navButton {
   margin-left: 20px;
   border: none;
@@ -35,15 +36,20 @@
   cursor: pointer;
   color: #003366;
 }
+
+/* Linki nawigacyjne */
 .navbar a {
   color: #000;
   text-decoration: none;
   margin: 0 5px;
 }
+
+/* Styl ciała dokumentu */
 body {
   font-family: sans-serif;
 }
 
+/* Menu rozwijane nawigacji */
 .nav-dropdown-menu {
   display: none;
   opacity: 0;
@@ -63,15 +69,17 @@ body {
 
 .dropdown-item:hover,
 .dropdown-item.active {
-  background-color: #ffe5e5; /* Light red background on hover for dropdown items */
+  background-color: #9f34dd4b; /* Light red background on hover for dropdown items */
   color: #003366; /* Text color */
 }
 
+/* Styl ikony koszyka */
 .fa-shopping-cart {
   font-size: 24px;
   margin-right: 5px;
 }
 
+/* Licznik koszyka */
 .cart-count {
   background-color: red;
   color: white;
@@ -81,6 +89,24 @@ body {
   margin-left: 2px;
 }
 
+/* Menu rozwijane */
 .dropdown-menu {
   overflow: hidden;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.language-switcher .flag {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.language-switcher .flag.active {
+  border: 2px solid #000;
 }
